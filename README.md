@@ -40,7 +40,7 @@
     打開終端機或命令提示字元，切換到您希望存放專案程式碼的目錄，然後執行以下 `git clone` 命令：
 
     ```bash
-    git clone [https://github.com/](https://github.com/)[Your GitHub Username]/KindergartenArtScoreAPI.git  *(請將 [Your GitHub Username] 替換為您的 GitHub 用户名，並確認倉庫名稱是否正確)*
+    git clone [https://github.com/](https://github.com/)Luffy860412/KindergartenArtScoreAPI.git
     ```
 
 2.  **切換到專案目錄:**
@@ -77,7 +77,7 @@
     dotnet run
     ```
 
-    如果應用程式成功啟動，您應該會在終端機中看到類似 `Now listening on: http://localhost:5092`  的訊息，表示 API  正在 `http://localhost:5092`  這個網址監聽請求。
+    如果應用程式成功啟動，您應該會在終端機中看到類似 `Now listening on: http://localhost:5000`  的訊息，表示 API  正在 `http://localhost:5000`  這個網址監聽請求。
 
 6.  **測試 API 端點:**
 
@@ -88,7 +88,7 @@
     打開另一個終端機視窗 (或使用同一個終端機視窗，但不要關閉正在執行 API 應用程式的視窗)，執行以下 `curl` 命令：
 
     ```bash
-    curl http://localhost:5092/api/Students
+    curl http://localhost:5000/api/Students
     ```
 
     如果 API  正常運作，您應該會在終端機中看到一個 JSON  陣列，其中包含了預設的學生資料 (種子資料)。  例如：
@@ -123,19 +123,19 @@
 
     * **取得特定學生資料 (Get Student by Id):**
       ```bash
-      curl http://localhost:5092/api/Students/{id}   *(請將 {id} 替換為實際的學生 Id，例如 1, 2, 3 等)*
+      curl http://localhost:5000/api/Students/{id}   *(請將 {id} 替換為實際的學生 Id，例如 1, 2, 3 等)*
       ```
     * **新增學生資料 (Create Student):**  (需要使用 `POST` 方法，並在請求 Body 中傳遞 JSON  格式的學生資料，具體格式請參考 `Models/Student.cs`  類別定義)
       ```bash
-      curl -X POST -H "Content-Type: application/json" -d "{ \"name\": \"新的學生姓名\", \"className\": \"新的班級名稱\", \"artScore\": 95 }" http://localhost:5092/api/Students
+      curl -X POST -H "Content-Type: application/json" -d "{ \"name\": \"新的學生姓名\", \"className\": \"新的班級名稱\", \"artScore\": 95 }" http://localhost:5000/api/Students
       ```
     * **更新學生資料 (Update Student):**  (需要使用 `PUT` 方法，並在請求 Body 中傳遞 JSON  格式的學生資料，並在 URL 中指定要更新的學生 Id)
       ```bash
-      curl -X PUT -H "Content-Type: application/json" -d "{ \"id\": 1, \"name\": \"更新後的學生姓名\", \"className\": \"更新後的班級名稱\", \"artScore\": 98 }" http://localhost:5092/api/Students/1
+      curl -X PUT -H "Content-Type: application/json" -d "{ \"id\": 1, \"name\": \"更新後的學生姓名\", \"className\": \"更新後的班級名稱\", \"artScore\": 98 }" http://localhost:5000/api/Students/1
       ```
     * **刪除學生資料 (Delete Student):**  (需要使用 `DELETE` 方法，並在 URL 中指定要刪除的學生 Id)
       ```bash
-      curl -X DELETE http://localhost:5092/api/Students/{id}  *(請將 {id} 替換為實際的學生 Id，例如 1, 2, 3 等)*
+      curl -X DELETE http://localhost:5000/api/Students/{id}  *(請將 {id} 替換為實際的學生 Id，例如 1, 2, 3 等)*
       ```
 
 **資料庫檔案**
