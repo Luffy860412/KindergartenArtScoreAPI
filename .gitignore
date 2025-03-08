@@ -1,0 +1,14 @@
+bin/
+obj/
+*.csproj.user
+*.sln.docstates
+*.suo
+*.user
+*.vspscc
+*.vssscc
+_ReSharper*/
+[Bb]uild/
+[Dd]ebug*/
+[Rr]elease*/
+*.sqlite
+*.db
