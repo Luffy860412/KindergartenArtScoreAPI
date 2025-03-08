@@ -1,7 +1,5 @@
 # KindergartenArtScoreAPI (幼兒園美術評分系統 API)
 
-[![.NET](https://github.com/Luffy860412/KindergartenArtScoreAPI/workflows/.NET/badge.svg)](https://github.com/Luffy860412/KindergartenArtScoreAPI/actions/workflows/.NET.yml)  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
 **簡介**
 
 `KindergartenArtScoreAPI` 是一個使用 ASP.NET Core Web API 框架開發的後端 API 專案，旨在為幼兒園美術評分系統提供數據存取和管理功能。 這個 API 提供了一系列端點，用於管理學生的美術評分資料，包括新增、讀取、更新和刪除學生資料。
