@@ -98,21 +98,21 @@
         {
             "id": 1,
             "name": "煜城 邵",
-            "className": "草莓",
-            "artScore": 89
+            "class_name": "草莓",
+            "art_score": 89
         },
         {
             "id": 2,
             "name": "炎彬 姜",
-            "className": "草莓",
-            "artScore": 52
+            "class_name": "草莓",
+            "art_score": 52
         },
         ...(省略部分資料)
         {
             "id": 40,
             "name": "越澤 董",
-            "className": "蘋果",
-            "artScore": 42
+            "class_name": "蘋果",
+            "art_score": 42
         }
     ]
     ```
