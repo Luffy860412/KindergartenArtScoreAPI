@@ -28,6 +28,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseStaticFiles(); // 添加這行來啟用靜態檔案服務
+
 app.UseAuthorization();
 
 app.MapControllers();

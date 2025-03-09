@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幼稚園美術成績管理系統</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>幼稚園美術成績管理系統</h1>
+        <div id="student-list-container">
+            <h2>學生列表</h2>
+            <button id="fetch-students-button">查詢所有學生資料</button>
+            <div class="form-group">
+                <label for="student-id">學生 ID:</label>
+                <input type="number" id="student-id" name="student-id">
+                <button id="fetch-student-button">查詢單一學生資料</button>
+            </div>
+            <table id="student-table" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>姓名</th>
+                        <th>班級</th>
+                        <th>美術評分</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="student-table-body">
+                    <!-- 學生資料將由 JavaScript 動態生成 -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="add-student-container">
+            <h2>新增學生</h2>
+            <form id="add-student-form">
+                <div class="form-group">
+                    <label for="student-name">姓名:</label>
+                    <input type="text" id="student-name" name="student-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="class-name">班級:</label>
+                    <input type="text" id="class-name" name="class-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="art-score">美術評分:</label>
+                    <input type="number" id="art-score" name="art-score" min="0" max="100" required>
+                </div>
+                <button type="submit">新增學生</button>
+            </form>
+        </div>
+
+        <div id="edit-student-container" style="display:none;">
+            <h2>編輯學生</h2>
+            <form id="edit-student-form">
+                <input type="hidden" id="edit-student-id" name="edit-student-id">
+                <div class="form-group">
+                    <label for="edit-student-name">姓名:</label>
+                    <input type="text" id="edit-student-name" name="edit-student-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-art-score">美術評分:</label>
+                    <input type="number" id="edit-art-score" name="edit-art-score" min="0" max="100" required>
+                </div>
+                <button type="submit">更新學生</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
